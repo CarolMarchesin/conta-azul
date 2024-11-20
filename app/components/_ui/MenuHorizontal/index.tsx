@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { menuData } from "@/constants/menuItems";
-import MenuItem from "./MenuItem";
+import { MenuItem } from "./MenuItem";
 
 export const MenuHorizontal = () => {
   const [activeItem, setActiveItem] = useState<string | null>(null);

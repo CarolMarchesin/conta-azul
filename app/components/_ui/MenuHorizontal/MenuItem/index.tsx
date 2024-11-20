@@ -10,7 +10,7 @@ interface MenuItemProps {
   isSubItem?: boolean;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({
+export const MenuItem: React.FC<MenuItemProps> = ({
   item,
   activeItem,
   setActiveItem,
@@ -62,5 +62,3 @@ const MenuItem: React.FC<MenuItemProps> = ({
     </Popover>
   );
 };
-
-export default MenuItem;
