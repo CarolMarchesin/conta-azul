@@ -2,7 +2,10 @@ import React from "react";
 import { Popover } from "../../Popover";
 
 interface MenuItemProps {
-  item: any;
+  item: {
+    label: string;
+    fields?: Array<{ label: string; fields?: Array<any> }>;
+  };
   activeItem: string | null | void;
   setActiveItem: (label: string | null) => void;
   activeSubItem?: string | null | void;
@@ -24,6 +27,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({
 
   const handleMouseLeave = () => {
     setActiveItem(null);
+
     if (setActiveSubItem) {
       setActiveSubItem(null);
     }
@@ -31,8 +35,16 @@ export const MenuItem: React.FC<MenuItemProps> = ({
 
   return (
     <Popover
-      text={item.label}
-      isOpen={activeItem === item.label}
+      buttonPopover={
+        <button
+          className={`${
+            isSubItem ? "text-black h-2" : "text-darksilver"
+          } font-medium inline-flex items-center outline-none text-sm/10`}
+        >
+          {item.label}
+        </button>
+      }
+      isOpenPopoverPanel={activeItem === item.label}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       isSubItem={isSubItem}

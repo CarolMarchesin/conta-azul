@@ -1,48 +1,49 @@
-import Image from "next/image";
-import ChevronDown from "@/public/icons/chevron-down.svg";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import React, { ReactElement } from "react";
 
-interface PainelProps {
-  text: any;
-  children: any;
-  isOpen: boolean;
+interface PopoverProps {
+  buttonPopover: ReactElement;
+  children?: any;
+  isOpenPopoverPanel: boolean;
   isSubItem?: boolean;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }
 
-export const Popover: React.FC<PainelProps> = ({
-  text,
+export const Popover: React.FC<PopoverProps> = ({
+  buttonPopover,
   children,
-  isOpen,
+  isOpenPopoverPanel,
   isSubItem,
   onMouseEnter,
   onMouseLeave,
 }) => {
-  return (
-    <div className="flex items-center">
-      <div className="relative">
-        <button
-          className={`${
-            isSubItem ? "text-black h-2" : "text-darksilver"
-          } inline-flex text-sm/10 font-medium items-center outline-none`}
-          onMouseEnter={onMouseEnter}
-        >
-          <span>{text}</span>
-          <Image
-            src={ChevronDown}
-            alt="Down"
-            width={15}
-            className={`ml-1 transition-transform duration-500 ${
-              isOpen && !isSubItem
+  
+  const buttonElement = buttonPopover
+    ? React.cloneElement(
+        buttonPopover,
+        { onMouseEnter: onMouseEnter },
+        <>
+          {buttonPopover.props.children}
+          <ChevronDownIcon
+            className={`ml-1 transition-transform duration-500 w-5 ${
+              isOpenPopoverPanel && !isSubItem
                 ? "-rotate-180"
                 : isSubItem
                 ? "-rotate-90"
                 : ""
             }`}
           />
-        </button>
+        </>
+      )
+    : null;
 
-        {isOpen && (
+  return (
+    <div className="flex items-center">
+      <div className="relative">
+        {buttonElement}
+
+        {isOpenPopoverPanel && (
           <div
             className={`painel ${
               isSubItem
