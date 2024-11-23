@@ -6,6 +6,7 @@ interface PopoverProps {
   children?: any;
   isOpenPopoverPanel: boolean;
   isSubItem?: boolean;
+  direction?: "left" | "right";
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }
@@ -15,10 +16,10 @@ export const Popover: React.FC<PopoverProps> = ({
   children,
   isOpenPopoverPanel,
   isSubItem,
+  direction = "left",
   onMouseEnter,
   onMouseLeave,
 }) => {
-  
   const buttonElement = buttonPopover
     ? React.cloneElement(
         buttonPopover,
@@ -38,6 +39,17 @@ export const Popover: React.FC<PopoverProps> = ({
       )
     : null;
 
+  const getPopoverPositionClasses = () => {
+    switch (direction) {
+      case "left":
+        return "left-1/2 -translate-x-1/4 mt-10";
+      case "right":
+        return "right-1/4 translate-x-[15%] mt-3";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div className="flex items-center">
       <div className="relative">
@@ -46,10 +58,9 @@ export const Popover: React.FC<PopoverProps> = ({
         {isOpenPopoverPanel && (
           <div
             className={`painel ${
-              isSubItem
-                ? "fixed left-full -mt-8 ml-10"
-                : "absolute left-1/2 z-10 mt-11"
-            } z-10 flex w-screen max-w-max -translate-x-1/4 px-4 transition cursor-pointer`}
+              isSubItem ? "fixed left-full -mt-6 ml-10" : "absolute"
+            } 
+            ${getPopoverPositionClasses()} z-10 flex w-screen max-w-max -translate-x-1/4 px-4 transition cursor-pointer`}
             onMouseLeave={onMouseLeave}
           >
             <div className="w-screen max-w-max flex-auto overflow-hidden bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5 p-5">
