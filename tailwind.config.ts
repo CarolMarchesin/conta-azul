@@ -14,6 +14,8 @@ export default {
         darksilver: "var(--darksilver)",
         bluedrawer: "var(--bluedrawer)",
         grayclean: "var(--grayclean)",
+        vividskyblue: "var(--vividskyblue)",
+        pictonblue: "var(--pictonblue)",
       },
       container: {
         screens: {

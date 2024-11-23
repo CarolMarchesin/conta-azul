@@ -8,6 +8,8 @@
   --darksilver: #6F6F6F;
   --bluedrawer: #2687E9D1;
   --grayclean: #f1f4f9;
+  --vividskyblue: #00aff0;
+  --pictonblue: #3dd0f6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +19,8 @@
     --darksilver: #6F6F6F;
     --bluedrawer: #2687E9D1;
     --grayclean: #f1f4f9;
+    --vividskyblue: #00aff0;
+    --pictonblue: #3dd0f6;
   }
 }
 
