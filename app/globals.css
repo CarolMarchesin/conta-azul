@@ -6,6 +6,8 @@
   --background: #ffffff;
   --foreground: #171717;
   --darksilver: #6F6F6F;
+  --bluedrawer: #2687E9D1;
+  --grayclean: #f1f4f9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +15,8 @@
     --background: #ffffff;
     --foreground: #171717;
     --darksilver: #6F6F6F;
+    --bluedrawer: #2687E9D1;
+    --grayclean: #f1f4f9;
   }
 }
 

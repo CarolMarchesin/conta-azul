@@ -12,6 +12,8 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         darksilver: "var(--darksilver)",
+        bluedrawer: "var(--bluedrawer)",
+        grayclean: "var(--grayclean)",
       },
       container: {
         screens: {
