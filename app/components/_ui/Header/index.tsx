@@ -7,28 +7,29 @@ import { useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 import { SearchModal } from "../SearchModal";
 import { EnterButton } from "./EnterButton";
+import { MenuButton } from "./MenuButton";
 
 export default function Header() {
   const [isOpenSearch, setIsOpenSearch] = useState<Boolean | null>(false);
 
   return (
     <header className="relative h-[80px] shadow-md">
-      <div className="container mx-auto sm:px-[30px] h-full">
-        <div className="grid grid-cols-2 content-center h-full">
-          <div className="h-full items-center flex gap-5">
+      <div className="container mx-auto px-[15px] sm:px-[30px] lg:px-[32px] h-full">
+        <div className="flex content-center h-full">
+          <div className="h-full w-full items-center flex gap-7">
             <Image
               src={contaAzulLogo}
               alt="Logo Conta Azul"
               width={150}
               height={80}
               priority
+              style={{ width: "150px", height: "80px" }}
             />
             <MenuHorizontal />
           </div>
-
-          <div className="h-full justify-end items-center flex gap-7">
+          <div className="h-full w-full justify-end items-center flex gap-7">
             <button
-              className={`text-gray-400 hover:text-gray-500`}
+              className={`text-gray-400 hover:text-gray-500 hidden lg:block`}
               onClick={() => setIsOpenSearch(!isOpenSearch)}
             >
               <MagnifyingGlassIcon className={"h-6"} />
@@ -39,12 +40,12 @@ export default function Header() {
             </button>
 
             <div>
-              <span className="hidden sm:inline-block text-gray-500 text-sm font-medium">
+              <span className="text-gray-500 text-sm font-medium">
                 Fale Conosco
               </span>
               <br />
               <a
-                className="hidden sm:inline-block text-blue-400 text-sm font-medium"
+                className="text-blue-400 text-sm font-medium"
                 href="https://api.whatsapp.com/send/?phone=554730640460&text=Ol%C3%A1%21%20Estou%20interessado%20em%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20sistema."
                 target="_blank"
               >
@@ -53,6 +54,7 @@ export default function Header() {
             </div>
 
             <EnterButton />
+            <MenuButton />
           </div>
         </div>
       </div>
