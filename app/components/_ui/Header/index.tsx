@@ -9,7 +9,7 @@ import { SearchModal } from "../SearchModal";
 import { EnterButton } from "./EnterButton";
 import { MenuButton } from "./MenuButton";
 
-export default function Header() {
+export const Header = () => {
   const [isOpenSearch, setIsOpenSearch] = useState<Boolean | null>(false);
 
   return (
