@@ -11,7 +11,7 @@ export const MenuHorizontal = () => {
   return (
     <>
       {menuData.map((item) => (
-        <React.Fragment key={item.label}>
+        <div key={item.label} className="hidden lg:inline-flex">
           {item.fields ? (
             <MenuItem
               item={item}
@@ -30,7 +30,7 @@ export const MenuHorizontal = () => {
               {item.label}
             </button>
           )}
-        </React.Fragment>
+        </div>
       ))}
     </>
   );
