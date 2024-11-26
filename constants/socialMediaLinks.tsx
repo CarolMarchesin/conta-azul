@@ -1,7 +1,7 @@
-import Facebook from "@/public/facebook-logo.svg";
-import Instagram from "@/public/instagram-logo.svg";
-import Linkedin from "@/public/linkedIn-logo.svg";
-import Youtube from "@/public/youtube-logo.svg";
+import Facebook from "@/public/assets/logos/facebook-logo.svg";
+import Instagram from "@/public/assets/logos/instagram-logo.svg";
+import Linkedin from "@/public/assets/logos/linkedIn-logo.svg";
+import Youtube from "@/public/assets/logos/youtube-logo.svg";
 import { StaticImageData } from "next/image";
 
 interface listSocialMedia {
