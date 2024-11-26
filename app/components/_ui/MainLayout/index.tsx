@@ -5,14 +5,11 @@ interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-export const MainLayout : React.FC <MainLayoutProps> = ({children}) => {
+export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-
-      <main className="container mx-auto px-[15px] sm:px-[30px] lg:px-[32px] h-full">
-      {children}
-      </main>
+      <main className="mb-10 mt-[80px]">{children}</main>
       <Footer />
     </div>
   );
