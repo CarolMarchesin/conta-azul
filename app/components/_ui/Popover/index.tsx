@@ -58,7 +58,7 @@ export const Popover: React.FC<PopoverProps> = ({
         {isOpenPopoverPanel && (
           <div
             className={`painel ${
-              isSubItem ? "fixed left-full -mt-6 ml-10" : "absolute"
+              isSubItem ? "fixed left-full -mt-10 ml-10" : "absolute"
             } 
             ${getPopoverPositionClasses()} z-10 flex w-screen max-w-max -translate-x-1/4 px-4 transition cursor-pointer`}
             onMouseLeave={onMouseLeave}
