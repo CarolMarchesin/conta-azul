@@ -1,5 +1,5 @@
 import { DevicePhoneMobileIcon } from "@heroicons/react/16/solid";
-import whatsappIcon from "@/public/whatsapp-logo.svg";
+import whatsappIcon from "@/public/assets/logos/whatsapp-logo.svg";
 import Image from "next/image";
 
 export const Footer = () => {

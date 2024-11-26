@@ -1,6 +1,6 @@
 "use client";
 
-import contaAzulLogo from "@/public/conta-azul-logo.svg";
+import contaAzulLogo from "@/public/assets/logos/conta-azul-logo.svg";
 import Image from "next/image";
 import { MenuHorizontal } from "../MenuHorizontal";
 import { useState } from "react";

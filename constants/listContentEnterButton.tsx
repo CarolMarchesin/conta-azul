@@ -1,5 +1,5 @@
-import ProSimbolo from "@/public/pro-simbolo.svg";
-import MaisSimbolo from "@/public/mais-simbolo.svg";
+import ProSimbolo from "@/public/assets/icons/pro-simbolo.svg";
+import MaisSimbolo from "@/public/assets/icons/mais-simbolo.svg";
 
 interface ListContentEnterButton {
   title: string;
