@@ -13,7 +13,7 @@ export const Header = () => {
   const [isOpenSearch, setIsOpenSearch] = useState<Boolean | null>(false);
 
   return (
-    <header className="relative h-[80px] shadow-md">
+    <header className="fixed h-[80px] shadow-md w-full bg-white z-50">
       <div className="container mx-auto px-[15px] sm:px-[30px] lg:px-[32px] h-full">
         <div className="flex content-center h-full">
           <div className="h-full w-full items-center flex gap-7">
@@ -21,9 +21,8 @@ export const Header = () => {
               src={contaAzulLogo}
               alt="Logo Conta Azul"
               width={150}
-              height={80}
               priority
-              style={{ width: "150px", height: "80px" }}
+              style={{ width: "150px", height: "auto" }}
             />
             <MenuHorizontal />
           </div>
