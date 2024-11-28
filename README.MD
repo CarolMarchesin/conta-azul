@@ -30,13 +30,13 @@ Para rodar este projeto localmente, siga os passos abaixo:
 1. Clone o repositório:
 
    ```sh
-   git clone https://github.com/CarolMarchesin/nextjs-dashboard.git
+   git clone https://github.com/CarolMarchesin/conta-azul.git
    ```
 
 2. Acesse o diretório do projeto:
 
    ```sh
-   cd nextjs-dashboard
+   cd conta-azul
    ```
 
 3. Instale as dependências:
