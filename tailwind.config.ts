@@ -17,6 +17,7 @@ export default {
         vividskyblue: "var(--vividskyblue)",
         pictonblue: "var(--pictonblue)",
         lightbluegray: "var(--lightbluegray)",
+        darkblue: "var(--darkblue)",
       },
       container: {
         screens: {

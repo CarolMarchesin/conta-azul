@@ -11,6 +11,7 @@
   --vividskyblue: #00aff0;
   --pictonblue: #3dd0f6;
   --lightbluegray: #f1f4f9;
+  --darkblue: #0c178b;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +24,7 @@
     --vividskyblue: #00aff0;
     --pictonblue: #3dd0f6;
     --lightbluegray: #f1f4f9;
+    --darkblue: #0c178b;
   }
 }
 
