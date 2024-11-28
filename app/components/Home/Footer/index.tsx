@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import ContaAzulLogo from "@/public/assets/logos/conta-azul-logo.svg";
 import {
@@ -6,7 +7,7 @@ import {
   listContentPartners,
   listContentSegments,
   listContentToGoFurther,
-} from "@/constants/Footer";
+} from "@/constants/footer";
 import AppStore from "@/public/assets/images/app-store.webp";
 import GooglePlay from "@/public/assets/images/google-play.webp";
 import AWS from "@/public/assets/images/aws.webp";
@@ -17,8 +18,8 @@ import { listSocialMedia } from "@/constants/socialMediaLinks";
 export const Footer: React.FC = () => {
   return (
     <div className="container mx-auto px-[15px] sm:px-[30px] lg:px-[32px] h-full py-[70px]">
-      <div className="grid grid-cols-5 gap-12">
-        <div>
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 text-center lg:text-left">
+        <div className="flex flex-col items-center lg:items-start gap-4">
           <Image src={ContaAzulLogo} alt="Conta Azul" />
 
           <div className="flex flex-col gap-4 mt-5">
@@ -30,8 +31,8 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div>
-          <p className="text-gray-600 font-bold text-md ">Funcionalidades</p>
+        <div className="flex flex-col items-center lg:items-start">
+          <p className="text-gray-600 font-bold text-md">Funcionalidades</p>
 
           <div className="flex flex-col gap-4 mt-5">
             {listContentFunctionality.map((item, index) => (
@@ -42,7 +43,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center lg:items-start">
           <p className="text-gray-600 font-bold text-md">Segmentos</p>
 
           <div className="flex flex-col gap-4 mt-5">
@@ -54,7 +55,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center lg:items-start">
           <p className="text-gray-600 font-bold text-md">Para Parceiros</p>
 
           <div className="flex flex-col gap-4 mt-5">
@@ -75,7 +76,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center lg:items-start">
           <p className="text-gray-600 font-bold text-md">
             Baixe nossos aplicativos
           </p>
@@ -92,12 +93,12 @@ export const Footer: React.FC = () => {
 
           <p className="text-gray-600 font-bold text-md mt-28">Certificações</p>
 
-          <div className="mt-5 flex gap-4">
+
+          <div className="mt-3 flex justify-center lg:flex-col gap-4">
+          <div className="flex gap-4">
             <Image src={AWS} alt="AWS" />
             <Image src={AWSPartner} alt="AWS Partner" />
           </div>
-
-          <div className="mt-3">
             <Image src={Certificado} alt="Certificado" />
           </div>
         </div>
