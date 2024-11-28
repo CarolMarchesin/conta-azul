@@ -4,8 +4,8 @@ import SecuritySite from "@/public/assets/images/security-site.webp";
 export const Section2: React.FC = () => {
   return (
     <div className="bg-lightbluegray h-full mt-[70px]">
-      <div className="container mx-auto px-[15px] sm:px-[30px] lg:px-[32px] h-full py-[70px]">
-        <div className="text-[42px] font-bold text-gray-800 leading-[52px] text-center mb-11">
+    <div className="container mx-auto px-[15px] sm:px-[5px] lg:px-[22px] h-full py-20">
+    <div className="text-[42px] font-bold text-gray-800 leading-[52px] text-center mb-11">
           Um Sistema ERP <span className="text-blue-500">simples</span> e{" "}
           <span className="text-blue-500">seguro</span>
         </div>

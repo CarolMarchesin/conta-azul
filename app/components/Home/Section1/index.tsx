@@ -9,10 +9,10 @@ export const Section1: React.FC = () => {
     setAccept(!accept);
   };
   return (
-    <div className="container mx-auto px-[15px] sm:px-[30px] lg:px-[32px] h-full">
+    <div className="container mx-auto px-[15px] sm:px-[5px] lg:px-[22px] h-full">
       <div className="mt-[70px]">
         <div className="flex flex-col sm:flex-row items-center">
-          <div className=" w-full sm:w-[47%] sm:pr-[10px] sm:mb-0 md:pr-[91px] mb-10">
+          <div className=" w-full sm:w-[47%] md:w-[50%] sm:pr-[10px] sm:mb-0 md:pr-[45px] mb-10">
             <div className="text-[42px] font-bold text-gray-800 leading-[52px]">
               <span className="text-blue-500">Controle</span> seu negócio e{" "}
               <span className="text-blue-500">ganhe tempo</span> com o ERP Conta
@@ -26,9 +26,9 @@ export const Section1: React.FC = () => {
               decisões.
             </div>
 
-            <form className="mt-6 flex flex-col md:flex-row items-stretch h-full">
+            <form className="mt-6 flex flex-col lg:flex-row items-stretch h-full">
               <input
-                className="w-full md:w-[55%] items-center gap-2 border border-gray-300 rounded-md font-medium p-4 pl-3 bg-transparent focus:border-blue-500 focus:outline-none"
+                className="w-full lg:w-[55%] items-center gap-2 border border-gray-300 rounded-md font-medium p-4 pl-3 bg-transparent focus:border-blue-500 focus:outline-none"
                 type="email"
                 placeholder="seu-email"
               />
@@ -40,7 +40,7 @@ export const Section1: React.FC = () => {
                   accept
                     ? "bg-green-500 text-white"
                     : "bg-white text-darksilver border border-gray-300 text-gray-400"
-                } w-full md:w-[45%] items-center py-5 font-medium rounded-md text-sm hover:opacity-90 transition-colors duration-100`}
+                } w-full lg:w-[45%] items-center py-5 font-medium rounded-md text-sm hover:opacity-90 transition-colors duration-100`}
               >
                 Experimente Grátis
               </button>
@@ -60,7 +60,7 @@ export const Section1: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full sm:w-[53%]">
+          <div className="w-full sm:w-[53%] md:w-[50%]">
             <Image
               src={AccounstPayable}
               alt="Accounts Payable"
